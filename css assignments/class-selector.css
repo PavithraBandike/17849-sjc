@@ -1,0 +1,17 @@
+.h1{
+    color:white;
+    background-color: black;
+    padding:10px;
+    
+}
+.h2{
+    color:darkslategray;
+}
+.div{
+    border: 2px solid black;
+    background-color:cadetblue;
+    font-style: italic;
+}
+    
+       
+

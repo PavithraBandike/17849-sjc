@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Formatting</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Text-Align</h1>
+    <p>Alignment refers to the text’s position within the text box. Typically, the default settings align the text
+        horizontally to the left and vertically to the top. The text’s horizontal alignment (left, center, right) can be
+        adjusted separately from its vertical alignment (top, middle, or bottom).
+
+    </p>
+    <h1 style="text-decoration:underline">Text-Decoration</h1>
+    <p>Text decorations are drawn across descendant text elements. This means that if an element specifies a text
+        decoration, then a child element can't remove the decoration. For example, in the markup
+    <p>This text has <em>some emphasized words</em> in it.</p>, the style rule p { text-decoration: underline; } would
+    cause the entire paragraph to be underlined. The style rule em { text-decoration: none; } would not cause any
+    change; the entire paragraph would still be underlined. However, the rule em { text-decoration: overline; } would
+    cause a second decoration to appear on "some emphasized words".</p>
+    <h1 style="text-transform: capitalize;">Text-Transform</h1>
+    <p>The text-transform property takes into account language-specific case mapping rules such as the following:
+
+        In Turkic languages, like Turkish (tr), Azerbaijani (az), Crimean Tatar (crh), Volga Tatar (tt), and Bashkir
+        (ba), there are two kinds of i, with and without the dot, and two case pairings: i/İ and ı/I.
+        In German (de), the ß becomes SS in uppercase.
+        In Dutch (nl), the ij digraph becomes IJ, even with text-transform: capitalize, which only puts the first letter
+        of a word in uppercase.
+        In Greek (el), vowels lose their accent when the whole word is in uppercase (ά/Α), except for the disjunctive
+        eta (ή/Ή). Also, diphthongs with an accent on the first vowel lose the accent and gain a diaeresis on the second
+        vowel (άι/ΑΪ).</p>
+</body>
+
+</html>
