@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Notification Component</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Custom styles for the notification component */
+    .custom-notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 300px;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Custom Notification Component -->
+<div class="custom-notification" id="notificationComponent" style="display: none;">
+  <div class="alert" role="alert">
+    <strong id="notificationTitle"></strong>
+    <span id="notificationMessage"></span>
+    <button type="button" class="close" aria-label="Close" onclick="hideNotification()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+
+<!-- Button to trigger the notification -->
+<button type="button" class="btn btn-primary" onclick="showNotification('success', 'Success!', 'Operation completed successfully.')">Show Success Notification</button>
+<button type="button" class="btn btn-warning" onclick="showNotification('warning', 'Warning!', 'Please proceed with caution.')">Show Warning Notification</button>
+<button type="button" class="btn btn-danger" onclick="showNotification('danger', 'Error!', 'An error occurred while processing your request.')">Show Error Notification</button>
+
+<script>
+  function showNotification(type, title, message) {
+    var notificationComponent = document.getElementById('notificationComponent');
+    notificationComponent.style.display = 'block';
+    
+    var notificationTitle = document.getElementById('notificationTitle');
+    var notificationMessage = document.getElementById('notificationMessage');
+
+    notificationComponent.classList.remove('alert-success', 'alert-warning', 'alert-danger');
+    notificationComponent.classList.add('alert-' + type);
+    notificationTitle.textContent = title;
+    notificationMessage.textContent = message;
+  }
+
+  function hideNotification() {
+    var notificationComponent = document.getElementById('notificationComponent');
+    notificationComponent.style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
